@@ -65,7 +65,7 @@ const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
+                d="M4 6h16M4 12h16M4 18h16"
               ></path>
             )}
           </svg>
@@ -77,7 +77,7 @@ const Header = () => {
             className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-4"
             aria-label="Mobile Menu"
           >
-            <nav aria-label="Monile navigation">
+            <nav aria-label="Mobile navigation">
               <ul className="flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
                   <li key={index}>
