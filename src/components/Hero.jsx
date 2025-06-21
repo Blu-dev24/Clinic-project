@@ -8,12 +8,13 @@ const Hero = () => {
     { value: "50+", label: "Treatments" },
     { value: "10+", label: "Years" },
   ];
+  
   return (
     <section
       id="home"
       className="relative overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100"
     >
-      <article className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+      <article className="container mx-auto px-4 py-14 md:pt-10 pb-5 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">
           <hgroup data-aos="fade-up" data-aos-delay='500'>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
@@ -28,7 +29,7 @@ const Hero = () => {
             </p>
           </hgroup>
 
-          <nav data-aos="fade-up" data-aos-delay='600' className="flex flex-col sm:flex-row gap-4 mb-12">
+          <nav data-aos="fade-up" data-aos-delay='600' className="flex flex-col sm:flex-row gap-4 mb-8">
             <a
               href="appointment"
               className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-center transition shadow-lg"

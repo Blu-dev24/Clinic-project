@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Services from "./components/Services"
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
    <div>
     <Header/>
     <Hero/>
+    <Services/>
   </div>
   );
 };
