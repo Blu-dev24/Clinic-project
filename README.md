@@ -24,7 +24,7 @@ A modern, responsive clinic website built with **React**, styled using **Tailwin
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/clinic-react-project.git
+   git clone https://github.com/Blu-dev24/Clinic-project.git
    cd clinic-react-project
 
 <div align="center">  
