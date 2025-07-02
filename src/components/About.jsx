@@ -46,17 +46,17 @@ const About = () => {
       id="about"
       className="py-14 overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100"
     >
-      <div className="container mx-auto px-4 flex flex-col">
+      <div className="container mx-auto px-4 flex flex-col">  
         <article
           data-aos="fade-up"
           data-aos-delay="400"
-          className="flex lg:flex-grow items-center gap-12"
+          className="flex lg:flex-row flex-col items-center gap-12"
         >
           <figure className="lg:w-5/12 relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
               <img
                 src={aboutImage}
-                className="w-full h-125 object-cover rounded-xl"
+                className="w-full h-125 object-cover rounded-xl "
                 loading="lazy"
               />
               <div

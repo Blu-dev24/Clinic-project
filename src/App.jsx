@@ -1,26 +1,21 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./components/Home";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import About from "./components/About";
 import Specialists from "./components/Specialists";
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
-
+  const navigate = useNavigate();
   return (
     <div>
-      <Header />
-      <Hero />
-      <Services />
-      <About/>
-      <Specialists/>
+      {/* <button onClick={() => navigate("/about")}>click</button> */}
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/about"
+          element={<Specialists/>}
+        />
+      </Routes>
     </div>
   );
 };

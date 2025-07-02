@@ -4,7 +4,6 @@ import SpecialistImg1 from "../assets/SpecialistImg1.jpeg";
 import SpecialistImg2 from "../assets/SpecialistImg2.jpeg";
 import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
 
-
 const Specialists = () => {
   const specialists = [
     {
@@ -35,6 +34,7 @@ const Specialists = () => {
       specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
     },
   ];
+console.log([...Array(5)])
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) =>
@@ -88,7 +88,7 @@ const Specialists = () => {
                     className="w-full h-full object-cover transition-transform duration-400 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <span className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></span>  
+                  <span className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></span>
                   <aside
                     className="absolute top-4 right-4 bg-white/90 px-3  py-1 rounded-full flex items-center shadow-sm"
                     aria-label={`Rating:${doctor.rating} stars`}
