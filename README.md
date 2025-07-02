@@ -1,12 +1,35 @@
-# React + Vite
+# 🏥 Clinic Website - React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive clinic website built with **React**, styled using **Tailwind CSS**, enhanced with **AOS animations**, and navigated using **React Router**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Fully responsive design
+- 🎨 Utility-first styling with Tailwind CSS
+- 🚦 Smooth client-side routing with React Router
+- ✨ On-scroll animations using AOS (Animate on Scroll)
+- 📱 Mobile-friendly layout
+- ⚡ Fast and optimized performance
 
-## Expanding the ESLint configuration
+## 📁 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React**
+- **Tailwind CSS**
+- **React Router DOM**
+- **AOS (Animate On Scroll)**
+
+---
+
+## 🔧 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/clinic-react-project.git
+   cd clinic-react-project
+
+<div align="center">  
+
+Made by\
+Arun Payaal
+
+</div>
