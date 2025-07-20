@@ -236,7 +236,7 @@ const Contact = () => {
           className="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden"
         >
           <iframe
-            src="http://www.openstreetmap.org/export/embed.html?bbox=-0.12%2C51.50%2C-0.10%2C51.52&layer=mapnik"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.12%2C51.50%2C-0.10%2C51.52&layer=mapnik"
             width="100%"
             height="450"
             style={{ border: 0 }}
