@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "#services", label: "services" },
     { href: "#about", label: "About Us" },
     { href: "#specialities", label: "Our Specialities" },
@@ -94,6 +94,8 @@ const Header = () => {
             </nav>
           </aside>
         )}
+
+  
 
         <nav className="hidden md:block" aria-label="Appointment booking">
           <a

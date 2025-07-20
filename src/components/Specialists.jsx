@@ -1,7 +1,7 @@
 import React from "react";
-import SpecialistImg from "../assets/SpecialistImg.jpeg";
-import SpecialistImg1 from "../assets/SpecialistImg1.jpeg";
-import SpecialistImg2 from "../assets/SpecialistImg2.jpeg";
+import SpecialistsImg from "../assets/SpecialistsImg.png";
+import SpecialistsImg1 from "../assets/SpecialistsImg1.png";
+import SpecialistsImg2 from "../assets/SpecialistsImg2.png";
 import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
 
 const Specialists = () => {
@@ -10,7 +10,7 @@ const Specialists = () => {
       id: 1,
       name: "Dr. Anne Johnson",
       role: "Plastic Surgeon",
-      image: SpecialistImg,
+      image: SpecialistsImg,
       bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vero possimus.",
       rating: 5,
       specialities: ["Facelifts", "Rhinoplasty", " Blepharoplasty"],
@@ -19,7 +19,7 @@ const Specialists = () => {
       id: 2,
       name: "Dr. Michael Chen",
       role: "Dermatologist",
-      image: SpecialistImg1,
+      image: SpecialistsImg1,
       bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vero possimus.",
       rating: 4,
       specialities: ["Laser Treatments", "Botox", "Fillers"],
@@ -28,13 +28,12 @@ const Specialists = () => {
       id: 3,
       name: "Dr. Alena Rodriguez",
       role: "Aesthetic Physician",
-      image: SpecialistImg2,
+      image: SpecialistsImg2,
       bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vero possimus.",
       rating: 5,
       specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
     },
   ];
-console.log([...Array(5)])
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) =>

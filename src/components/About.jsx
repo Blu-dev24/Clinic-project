@@ -1,6 +1,6 @@
 import { FaAward, FaClinicMedical, FaUserMd, FaHeart } from "react-icons/fa";
 
-import aboutImage from "../assets/About.jpg";
+import aboutImage from "../assets/aboutImage.png";
 
 const About = () => {
   const stats = [
