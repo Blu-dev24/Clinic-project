@@ -89,7 +89,7 @@ const Contact = () => {
           className="text-center mb-16 relative"
         >
           {/* Decorative circle */}
-          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full bg-pink-100 opacity-30 z-0" />
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full bg-pink-100 opacity-30 z-0"></div>
 
           {/* Actual heading and text */}
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 relative z-10">
@@ -250,6 +250,6 @@ const Contact = () => {
       </div>
     </article>
   );
-};
+};  
 
 export default Contact;
