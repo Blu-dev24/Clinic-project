@@ -50,12 +50,12 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <aside className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-4">
-            <nav className="hidden md:flex space-x-8">
-              <Link to="/hero" className="navbarlinks">Home</Link>
-              <Link to="/services" className="navbarlinks">Services</Link>
-              <Link to="/about" className="navbarlinks">About Us</Link>
-              <Link to="/specialists" className="navbarlinks">Our Specialities</Link>
-              <Link to="/contact" className="navbarlinks">Contact</Link>
+            <nav className="flex flex-col space-y-4">
+              <Link to="/hero" className="navbarlinks" onClick={toggleMenu}>Home</Link>
+              <Link to="/services" className="navbarlinks" onClick={toggleMenu}>Services</Link>
+              <Link to="/about" className="navbarlinks" onClick={toggleMenu}>About Us</Link>
+              <Link to="/specialists" className="navbarlinks" onClick={toggleMenu}>Our Specialities</Link>
+              <Link to="/contact" className="navbarlinks" onClick={toggleMenu}>Contact</Link>
             </nav>
           </aside>
         )}
