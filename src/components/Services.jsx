@@ -5,6 +5,7 @@ import {
   FaSyringe,
   FaUserMd,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -111,13 +112,13 @@ const Services = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Ready to transform your look?
             </h3>
-            <a
-              href="#appointment"
+            <Link
+              to="/contact"
               className="bg-pink-600  hover:bg-pink-700 text-white px-8 py-3 rounded-full inline-block transition shadow-lg focus:outline-none focus:ring-2 focus:ring-pink-800 focus:ring-offset-2"
               aria-label="Book your consulatation now"
             >
               Book Your Consultation Now
-            </a>
+            </Link>
           </footer>
         </div>
       </section>

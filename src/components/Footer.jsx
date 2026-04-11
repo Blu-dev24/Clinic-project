@@ -1,140 +1,128 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter, FaYoutube, FaClinicMedical } from "react-icons/fa";
-import { MdAccessAlarm, MdEmail, MdPhone, MdLocationOn, MdAccessTime } from "react-icons/md";
+import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaYoutube,
+  FaClinicMedical,
+} from "react-icons/fa";
+import {
+  MdEmail,
+  MdPhone,
+  MdLocationOn,
+  MdAccessTime,
+} from "react-icons/md";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FaFacebook className="text-lg" />, label: "Facebook" },
-    { icon: <FaTwitter className="text-lg" />, label: "Twitter" },
-    { icon: <FaInstagram className="text-lg" />, label: "Instagram" },
-    { icon: <FaLinkedin className="text-lg" />, label: "LinkedIn" },
-    { icon: <FaYoutube className="text-lg" />, label: "Youtube" },
+    { icon: <FaFacebook />, label: "Facebook" },
+    { icon: <FaTwitter />, label: "Twitter" },
+    { icon: <FaInstagram />, label: "Instagram" },
+    { icon: <FaLinkedin />, label: "LinkedIn" },
+    { icon: <FaYoutube />, label: "YouTube" },
   ];
 
   const quickLinks = [
-    { text: "Home", href: "#" },
-    { text: "About Us", href: "#about" },
-    { text: "Our Services", href: "#services" },
-    { text: "Our Specialists", href: "#specialists" },
-    { text: "Contact Us", href: "#contact" },
-    { text: "Book Appointment", href: "#appointment" },
-  ];
-
-  const contactInfo = [
-    {
-      icon: (
-        <MdLocationOn className="text-pink-500 text-xl mt-1 mr-4 flex-shrink-0" />
-      ),
-      content: (
-        <a href="#" className="text-gray-400 hover:text-pink-500 transition">
-          123 Beauty Avenue, Medical District, London
-        </a>
-      ),
-    },
-    {
-      icon: (
-        <MdPhone className="text-pink-500 text-xl mt-1 mr-4 flex-shrink-0" />
-      ),
-      content: (
-        <a href="#" className="text-gray-400 hover:text-pink-500 transition">
-          +44 11 234 5678
-        </a>
-      ),
-    },
-    {
-      icon: (
-        <MdEmail className="text-pink-500 text-xl mt-1 mr-4 flex-shrink-0" />
-      ),
-      content: (
-        <a href="#" className="text-gray-400 hover:text-pink-500 transition">
-          info@glamclin.com
-        </a>
-      ),
-    },
-    {
-      icon: (
-        <MdAccessTime className="text-pink-500 text-xl mt-1 mr-4 flex-shrink-0" />
-      ),
-      content: (
-        <a href="#" className="text-gray-400 hover:text-pink-500 transition">
-          Sun-Thu: 9:00 AM - 8:00 PM, Fri: 2PM-9PM
-        </a>
-      ),
-    },
-  ];
-
-  const legalLinks = [
-    { text: "Privacy Policy", href: "#" },
-    { text: "Terms of Service", href: "#" },
-    { text: "Sitemap", href: "#" },
+    { text: "Home", path: "/hero" },
+    { text: "Services", path: "/services" },
+    { text: "About Us", path: "/about" },
+    { text: "Specialists", path: "/specialists" },
+    { text: "Contact Us", path: "/contact" },
   ];
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+          {/* About */}
           <section className="lg:col-span-2">
-            <header className="flex items-center mb-6">
-              <FaClinicMedical
-                className="text-3xl text-pink-500 mr-3"
-                aria-hidden="true"
-              />
+            <div className="flex items-center mb-6">
+              <FaClinicMedical className="text-3xl text-pink-500 mr-3" />
               <h2 className="text-2xl font-bold">Glamour Clinic</h2>
-            </header>
+            </div>
+
             <p className="text-gray-400 mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-              sequi maiores molestias vitae quod, repellendus nisi officiis odio
-              aliquid blanditiis?
+              Delivering advanced skincare treatments with expert care, precision,
+              and a focus on long-lasting, natural results.
             </p>
-            <nav aria-label="Social media links">
-              <ul className="flex space-x-4">
-                {socialLinks.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-pink-500 transition"
-                      aria-label={item.label}
-                    >
-                      {item.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </section>
-          <section>
-            <h3 className="text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-12 after:h-1 after:bg-pink-500">
-              Quick Links
-            </h3>
-            <nav aria-label="Quick Links">
-              <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-pink-500 transition"
-                    >
-                      {link.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </section>
-          <address>
-            <h3 className="text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-12 after:h-1 after:bg-pink-500">
-              Contact Us
-            </h3>
-            <ul className="space-y-4">
-              {contactInfo.map((info, index) => (
-                <li key={index} className="flex items-start">
-                  {info.icon}
-                  {info.content}
+
+            <ul className="flex space-x-4">
+              {socialLinks.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-pink-500 transition"
+                    aria-label={item.label}
+                  >
+                    {item.icon}
+                  </a>
                 </li>
               ))}
             </ul>
-          </address>
+          </section>
+
+          {/* Quick Links */}
+          <section>
+            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-2">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-400 hover:text-pink-500 transition"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Contact */}
+          <section>
+            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-2">
+              Contact Us
+            </h3>
+
+            <ul className="space-y-4 text-gray-400">
+
+              <li className="flex items-start">
+                <MdLocationOn className="text-pink-500 text-xl mr-3 mt-1" />
+                <span>123 Beauty Avenue, Medical District, London</span>
+              </li>
+
+              <li className="flex items-start">
+                <MdPhone className="text-pink-500 text-xl mr-3 mt-1" />
+                <span>+44 11 234 5678</span>
+              </li>
+
+              <li className="flex items-start">
+                <MdEmail className="text-pink-500 text-xl mr-3 mt-1" />
+                <span>info@glamclin.com</span>
+              </li>
+
+              <li className="flex items-start">
+                <MdAccessTime className="text-pink-500 text-xl mr-3 mt-1" />
+                <span>Sun–Thu: 9AM–8PM, Fri: 2PM–9PM</span>
+              </li>
+
+            </ul>
+          </section>
+
         </div>
+
+        {/* Bottom */}
+        <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+          © {new Date().getFullYear()} Glamour Clinic. All rights reserved.
+        </div>
+
       </div>
     </footer>
   );

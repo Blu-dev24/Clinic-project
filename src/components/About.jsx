@@ -1,5 +1,4 @@
 import { FaAward, FaClinicMedical, FaUserMd, FaHeart } from "react-icons/fa";
-
 import aboutImage from "../assets/aboutImage.png";
 
 const About = () => {
@@ -7,37 +6,37 @@ const About = () => {
     {
       value: "10+",
       label: "Years Experience",
-      icon: <FaAward className="text-pink-500" aria-hidden="true" />,
+      icon: <FaAward className="text-pink-500" />,
     },
     {
-      value: "2.5+",
+      value: "2500+",
       label: "Happy Clients",
-      icon: <FaHeart className="text-pink-500" aria-hidden="true" />,
+      icon: <FaHeart className="text-pink-500" />,
     },
     {
       value: "15+",
       label: "Expert Doctors",
-      icon: <FaUserMd className="text-pink-500" aria-hidden="true" />,
+      icon: <FaUserMd className="text-pink-500" />,
     },
     {
       value: "10+",
-      label: "Doctors",
-      icon: <FaClinicMedical className="text-pink-500" aria-hidden="true" />,
+      label: "Specialized Treatments",
+      icon: <FaClinicMedical className="text-pink-500" />,
     },
   ];
 
   const approchItems = [
     {
-      icon: <FaHeart className="text-pink-600" aria-hidden="true" />,
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, debitis!",
+      icon: <FaHeart className="text-pink-600" />,
+      text: "We create personalized skincare plans tailored to each client's unique needs.",
     },
     {
-      icon: <FaUserMd className="text-pink-600" aria-hidden="true" />,
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, debitis!",
+      icon: <FaUserMd className="text-pink-600" />,
+      text: "Our certified specialists use advanced techniques for safe effective skin treatments.",
     },
     {
-      icon: <FaClinicMedical className="text-pink-600" aria-hidden="true" />,
-      text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, debitis!",
+      icon: <FaClinicMedical className="text-pink-600" />,
+      text: "We combine modern technology with care to deliver consistent long lasting results.",
     },
   ];
 
@@ -46,32 +45,20 @@ const About = () => {
       id="about"
       className="py-14 overflow-hidden bg-gradient-to-br from-pink-100 to-purple-100"
     >
-      <div className="container mx-auto px-4 flex flex-col">  
-        <article
-          data-aos="fade-up"
-          data-aos-delay="400"
-          className="flex lg:flex-row flex-col items-center gap-12"
-        >
+      <div className="container mx-auto px-4 flex flex-col">
+        <article className="flex lg:flex-row flex-col items-center gap-12">
+
+          {/* Image */}
           <figure className="lg:w-5/12 relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
               <img
                 src={aboutImage}
-                className="w-full h-125 object-cover rounded-xl "
+                className="w-full h-125 object-cover rounded-xl"
                 loading="lazy"
               />
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
-                aria-hidden="true"
-              ></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
-            <span
-              className="hidden lg:block absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-pink-500 opacity-20 z-0"
-              aria-hidden="true"
-            ></span>
-            <span
-              className="hidden lg:block absolute -top-8 -right-8 w-40 h-40 rounded-full bg-pink-500 opacity-20 z-0"
-              aria-hidden="true"
-            ></span>
+
             <aside className="absolute bottom-1 -right-5 bg-white p-3 rounded-xl shadow-lg z-20 flex flex-col">
               <strong className="text-2xl font-bold text-pink-600">10+</strong>
               <small className="text-xs font-medium text-gray-600">
@@ -79,87 +66,85 @@ const About = () => {
               </small>
             </aside>
           </figure>
-          <div data-aos="fade-up" data-aos-delay="600" className="lg:w-7/12">
-            <header>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                About <span className="text-pink-600">Glamour Clinic</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                repellat alias tempore neque et dolorem deleniti laboriosam
-                amet! Temporibus, quod cumque recusandae laborum laboriosam sint
-                cupiditate itaque assumenda fugit delectus!
-              </p>
-            </header>
-            <section className="m-8">
+
+          {/* Content */}
+          <div className="lg:w-7/12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              About <span className="text-pink-600">Glamour Clinic</span>
+            </h2>
+
+            <p className="text-lg text-gray-600 mb-6">
+              At Glamour Clinic, we are dedicated to enhancing your natural beauty through advanced skincare treatments and personalized care. Our team of experienced professionals combines modern technology with a client-first approach to deliver safe, effective, and result-driven solutions.
+            </p>
+
+            {/* Approach */}
+            <div className="m-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
                 Our Approach
               </h3>
+
               <ul className="space-y-3">
                 {approchItems.map((item, index) => (
                   <li key={index} className="flex items-center">
-                    <figure className="bg-pink-100 p-1 rounded-full mr-3">
+                    <span className="bg-pink-100 p-1 rounded-full mr-3">
                       {item.icon}
-                    </figure>
+                    </span>
                     <p className="text-gray-700">{item.text}</p>
                   </li>
                 ))}
               </ul>
-            </section>
-            <section className="grid grid-cols-2 gap-4 mb-8">
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
               {stats.map((item, index) => (
-                <article
+                <div
                   key={index}
                   className="bg-white p-4 rounded-lg shadow-sm flex items-center"
                 >
-                  <figure className="mr-3">{item.icon}</figure>
+                  <span className="mr-3">{item.icon}</span>
                   <div>
                     <strong className="text-xl font-bold text-gray-800">
                       {item.value}
                     </strong>
                     <p className="text-sm text-gray-600">{item.label}</p>
                   </div>
-                </article>
+                </div>
               ))}
-            </section>
-            <nav>
-              <a
-                href="#"
-                className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full transition shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800 focus:ring-offset-2"
-              >
-                Meet Our Specialists
-              </a>
-            </nav>
+            </div>
+
+            <a
+              href="#"
+              className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full transition shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800"
+            >
+              Meet Our Specialists
+            </a>
           </div>
         </article>
-        <aside className="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg relative overflow-hidden">
-          <span
-            className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-pink-500 opacity-40"
-            aria-hidden="true"
-          ></span>
-          <div className="relative z-10">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Our Mission
-            </h3>
-            <blockquote className="text-lg text-gray-700 mb-6">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quod
-              omnis nihil, porro voluptatum dolorum error sapiente. Ipsa,
-              dignissimos perspiciatis sit in odit placeat consectetur eos
-              ratione quisquam, possimus voluptas?
-            </blockquote>
-            <figure className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-                <FaUserMd className="text-pink-600" aria-hidden="true" />
-              </div>
-              <figcaption>
-                <cite className="font-semibold text-gray-800 not-italic">
-                  Dr. Sarah Johnson
-                </cite>
-                <p>Medical Director & Founder</p>
-              </figcaption>
-            </figure>
+
+        {/* Mission */}
+        <div className="mt-20 bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">
+            Our Mission
+          </h3>
+
+          <p className="text-lg text-gray-700 mb-6">
+            Our mission at Glamour Clinic is to deliver high-quality, result-driven skincare treatments that enhance natural beauty while maintaining the highest standards of safety and care. We aim to build trust, confidence, and long-term relationships with every client we serve.
+          </p>
+
+          <div className="flex items-center">
+            <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+              <FaUserMd className="text-pink-600" />
+            </div>
+            <div>
+              <p className="font-semibold text-gray-800">
+                Dr. Sarah Johnson
+              </p>
+              <p>Medical Director & Founder</p>
+            </div>
           </div>
-        </aside>
+        </div>
+
       </div>
     </section>
   );
