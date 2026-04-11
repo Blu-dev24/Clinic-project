@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../assets/hero.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const stats = [
@@ -30,20 +31,20 @@ const Hero = () => {
           </hgroup>
 
           <nav data-aos="fade-up" data-aos-delay='600' className="flex flex-col sm:flex-row gap-4 mb-8">
-            <a
-              href="appointment"
+            <Link
+              to="/contact"
               className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full text-center transition shadow-lg"
               aria-label="Book a consultation"
             >
               Book a Consultation
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              to="/services"
               className="border border-pink-600 text-pink-600 hover:bg-pink-50 px-8 py-3 rounded-full text-center transition"
               aria-label="Explore our services"
             >
               Explore Services
-            </a>
+            </Link>
           </nav>
           <aside data-aos="fade-up" data-aos-delay='800' className="py-4">
             <ul className="flex flex-wrap justify-center gap-4 md:gap-8 text-center">
