@@ -50,7 +50,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <aside className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-4">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-4 justify-center items-center">
               <Link to="/hero" className="navbarlinks" onClick={toggleMenu}>Home</Link>
               <Link to="/services" className="navbarlinks" onClick={toggleMenu}>Services</Link>
               <Link to="/about" className="navbarlinks" onClick={toggleMenu}>About Us</Link>
