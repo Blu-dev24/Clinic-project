@@ -3,6 +3,7 @@ import SpecialistsImg from "../assets/SpecialistsImg.png";
 import SpecialistsImg1 from "../assets/SpecialistsImg1.png";
 import SpecialistsImg2 from "../assets/SpecialistsImg2.png";
 import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Specialists = () => {
   const specialists = [
@@ -120,12 +121,12 @@ const Specialists = () => {
                     </ul>
                     <figure
                       className="absolute -top-6 left-6 bg-pink-600 text-white p-3 rounded-full shadow-lg"
-                      aria-hidden="true"
+                      aria-hidden="true"a
                     >
                       <FaQuoteLeft className="text-lg" />
                     </figure>
                   </div>
-                </div>
+                </div>  
               </article>
             </li>
           ))}
@@ -150,13 +151,13 @@ const Specialists = () => {
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
             <nav className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full transition shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
                 aria-label="Book a Consultation"
               >
                 Book Consultation
-              </a>
+              </Link>
               <a
                 href="#"
                 className=" border border-pink-600 hover:bg-pink-700 text-pink-600 hover:text-white px-8 py-3 rounded-full transition shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"

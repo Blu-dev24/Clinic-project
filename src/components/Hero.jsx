@@ -7,12 +7,12 @@ const Hero = () => {
     { value: "15+", label: "Specialists" },
     { value: "50+", label: "Treatments" },
     { value: "10+", label: "Years" },
-  ];
+  ];  
   
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100"
+      className="relative overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100 h-screen"
     >
       <article className="container mx-auto px-4 py-14 md:pt-10 pb-5 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">

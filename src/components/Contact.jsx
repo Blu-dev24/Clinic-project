@@ -93,11 +93,10 @@ const Contact = () => {
 
           {/* Actual heading and text */}
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 relative z-10">
-            Contact <span className="text-pink-600">Our Clinic</span>
+            Contact <span className="text-pink-600">Our Clinic</span> to Book Your Consultation
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto relative z-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
-            praesentium.
+            Get personalized skincare solutions from our certified specialists—book your consultation today and take the first step toward healthier, radiant skin.
           </p>
         </header>
 
@@ -235,21 +234,10 @@ const Contact = () => {
           data-aos-delay="600"
           className="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden"
         >
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.12%2C51.50%2C-0.10%2C51.52&layer=mapnik"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            title="Clinic Location Map"
-            className="rounded-2xl"
-            aria-label="Clinic Location Map"
-          ></iframe>
         </figure>
       </div>
     </article>
   );
-};  
+};
 
 export default Contact;
