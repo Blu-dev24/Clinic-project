@@ -1,5 +1,6 @@
 import { FaAward, FaClinicMedical, FaUserMd, FaHeart } from "react-icons/fa";
 import aboutImage from "../assets/aboutImage.png";
+import doctor from "../assets/doctor.jpg";
 
 const About = () => {
   const stats = [
@@ -133,8 +134,8 @@ const About = () => {
           </p>
 
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
-              <FaUserMd className="text-pink-600" />
+            <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4 overflow-hidden">
+              <img src={doctor} alt="" />
             </div>
             <div>
               <p className="font-semibold text-gray-800">
