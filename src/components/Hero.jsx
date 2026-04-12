@@ -17,7 +17,7 @@ const Hero = () => {
     >
       <article className="container mx-auto px-4 py-14 md:pt-10 pb-5 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 mb-10 md:mb-0">
-          <hgroup data-aos="fade-up" data-aos-delay='500'>
+          <hgroup data-aos="fade-up" data-aos-delay='200'>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
               Enhance Your Natural{" "}
               <mark className="text-pink-600 bg-transparent">Beauty</mark>

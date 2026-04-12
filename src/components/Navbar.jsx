@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -62,7 +62,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <Link
-          to="/contact"
+          to="/appointment"
           className="hidden md:block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800"
         >
           Book Appointment
@@ -73,4 +73,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
