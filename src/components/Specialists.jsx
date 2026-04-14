@@ -6,35 +6,35 @@ import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Specialists = () => {
-  const specialists = [
-    {
-      id: 1,
-      name: "Dr. Anne Johnson",
-      role: "Plastic Surgeon",
-      image: SpecialistsImg,
-      bio: "Expert in facial enhancements delivering natural and refined aesthetic results.",
-      rating: 5,
-      specialities: ["Facelifts", "Rhinoplasty", "Blepharoplasty"],
-    },
-    {
-      id: 2,
-      name: "Dr. Michael Chen",
-      role: "Dermatologist",
-      image: SpecialistsImg1,
-      bio: "Specializes in advanced skin treatments for healthy, clear, and glowing skin.",
-      rating: 4,
-      specialities: ["Laser Treatments", "Botox", "Fillers"],
-    },
-    {
-      id: 3,
-      name: "Dr. Alena Rodriguez",
-      role: "Aesthetic Physician",
-      image: SpecialistsImg2,
-      bio: "Focused on non-invasive procedures for youthful and long-lasting skin results.",
-      rating: 5,
-      specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
-    },
-  ];
+    const specialists = [
+      {
+        id: 1,
+        name: "Dr. Anne Johnson",
+        role: "Plastic Surgeon",
+        image: SpecialistsImg,
+        bio: "Expert in facial enhancements delivering natural and refined aesthetic results.",
+        rating: 5,
+        specialities: ["Facelifts", "Rhinoplasty", "Blepharoplasty"],
+      },
+      {
+        id: 2,
+        name: "Dr. Michael Chen",
+        role: "Dermatologist",
+        image: SpecialistsImg1,
+        bio: "Specializes in advanced skin treatments for healthy, clear, and glowing skin.",
+        rating: 4,
+        specialities: ["Laser Treatments", "Botox", "Fillers"],
+      },
+      {
+        id: 3,
+        name: "Dr. Alena Rodriguez",
+        role: "Aesthetic Physician",
+        image: SpecialistsImg2,
+        bio: "Focused on non-invasive procedures for youthful and long-lasting skin results.",
+        rating: 5,
+        specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
+      },
+    ];
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) =>
