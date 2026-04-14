@@ -15,6 +15,7 @@ const appointment = () => {
       rating: 5,
       Availability: ["MON", "WED", "FRI"],
       specialities: ["Facelifts", "Rhinoplasty", "Blepharoplasty"],
+      timings:'10:00 AM - 1:30 PM',
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ const appointment = () => {
       rating: 4,
       Availability: ["MON", "WED", "FRI"],
       specialities: ["Laser Treatments", "Botox", "Fillers"],
+      timings:'10:00 AM - 12:30 PM',
     },
     {
       id: 3,
@@ -35,20 +37,21 @@ const appointment = () => {
       rating: 5,
       Availability: ["MON", "WED", "FRI"],
       specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
+      timings:'10:00 AM - 4:00 PM',
     },
   ];
 
   return (
-    <section className='relative overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100 h-screen'>
+    <section className='relative overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100 h-auto py-10 '>
+        <div className='h-[150px] text-4xl font-bold flex justify-center items-center my-10'>Find a Doctor</div>
       <div className='flex flex-col justify-center items-center'>
-        <div className='h-[150px] text-4xl font-bold'>Find a Doctor</div>
         {specialists.map((doctor, index) => (
           <div className='h-auto w-[600px] p-5 list-none'>
             <li className='m-2'>
               <div>
                 <div className='flex justify-between gap-8'>
-                  <div className='flex items-center gap-2'>
-                    <img src={doctor.image} alt="" className='h-15 w-15 rounded-full overflow-hidden' />
+                  <div className='flex items-center gap-3'>
+                    <img src={doctor.image} alt="" className='h-20 w-20 rounded-full overflow-hidden' />
                     <div>
                       <h2 className='font-bold'>{doctor.name}</h2>
                       <p className='text-[#e60278]'>{doctor.role}</p>
@@ -63,6 +66,7 @@ const appointment = () => {
                         </span>
                       ))}
                     </p>
+                    <p className='text-[13px] text-[#606878]'>Available: {doctor.timings}</p>
                   </div>
                 </div>
                 <div></div>
@@ -70,8 +74,8 @@ const appointment = () => {
             </li>
             <hr className='border-gray-400' />
             <div className='flex justify-between items-center h-10 px-4 mt-2'>
-              <h2>View Profile</h2>
-              <button className='rounded-2xl bg-pink-500 p-2 mt-1 cursor-pointer'>Book a Visit</button>
+              <button className='text-pink-500 cursor-pointer font-bold'>View Profile</button>
+              <button className='rounded-3xl bg-pink-500 py-2 px-3 mt-1 cursor-pointer text-[#f9f0ff]'>Book a Visit</button>
             </div>
           </div>
         ))}
