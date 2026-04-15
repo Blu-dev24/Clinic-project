@@ -19,7 +19,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav (md and above) */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden lg:flex space-x-6">
           <Link to="/hero" className="navbarlinks">Home</Link>
           <Link to="/services" className="navbarlinks">Services</Link>
           <Link to="/about" className="navbarlinks">About Us</Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded"
+          className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <aside className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-4">
+          <aside className="lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4 px-4">
             <nav className="flex flex-col space-y-4 justify-center items-center">
               <Link to="/hero" className="navbarlinks" onClick={toggleMenu}>Home</Link>
               <Link to="/services" className="navbarlinks" onClick={toggleMenu}>Services</Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <Link
           to="/appointment"
-          className="hidden md:block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800"
+          className="hidden lg:block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full transition-colors duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-800"
         >
           Book Appointment
         </Link>

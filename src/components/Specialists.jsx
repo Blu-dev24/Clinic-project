@@ -4,37 +4,9 @@ import SpecialistsImg1 from "../assets/SpecialistsImg1.png";
 import SpecialistsImg2 from "../assets/SpecialistsImg2.png";
 import { FaQuoteLeft, FaStar, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { doctors } from "../data/doctors";
 
 const Specialists = () => {
-    const specialists = [
-      {
-        id: 1,
-        name: "Dr. Anne Johnson",
-        role: "Plastic Surgeon",
-        image: SpecialistsImg,
-        bio: "Expert in facial enhancements delivering natural and refined aesthetic results.",
-        rating: 5,
-        specialities: ["Facelifts", "Rhinoplasty", "Blepharoplasty"],
-      },
-      {
-        id: 2,
-        name: "Dr. Michael Chen",
-        role: "Dermatologist",
-        image: SpecialistsImg1,
-        bio: "Specializes in advanced skin treatments for healthy, clear, and glowing skin.",
-        rating: 4,
-        specialities: ["Laser Treatments", "Botox", "Fillers"],
-      },
-      {
-        id: 3,
-        name: "Dr. Alena Rodriguez",
-        role: "Aesthetic Physician",
-        image: SpecialistsImg2,
-        bio: "Focused on non-invasive procedures for youthful and long-lasting skin results.",
-        rating: 5,
-        specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
-      },
-    ];
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) =>
@@ -52,22 +24,22 @@ const Specialists = () => {
       className="py-20 overflow-hidden bg-gradient-to-r from-pink-100 to-purple-100"
     >
       <div className="container mx-auto px-4">
-        
+
         {/* Header */}
-        <header 
+        <header
           data-aos="fade-up"
           className="text-center mb-16 relative"
         >
-          <h2 
-            data-aos="fade-up" 
+          <h2
+            data-aos="fade-up"
             data-aos-delay="100"
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
           >
             Meet Our <span className="text-pink-600">Expert Team</span>
           </h2>
 
-          <p 
-            data-aos="fade-up" 
+          <p
+            data-aos="fade-up"
             data-aos-delay="200"
             className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
@@ -77,16 +49,16 @@ const Specialists = () => {
 
         {/* Cards */}
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {specialists.map((doctor, index) => (
-            <li 
-              key={doctor.id} 
+          {doctors.map((doctor, index) => (
+            <li
+              key={doctor.id}
               className="group relative"
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
               <article className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
-                
-                <figure 
+
+                <figure
                   data-aos="zoom-in"
                   data-aos-delay={index * 150 + 100}
                   className="relative h-100 overflow-hidden"
@@ -107,12 +79,12 @@ const Specialists = () => {
                 </figure>
 
                 <div className="p-6 relative -mt-10">
-                  <div 
+                  <div
                     data-aos="fade-up"
                     data-aos-delay={index * 150 + 200}
                     className="bg-pink-50 rounded-lg shadow-md p-6"
                   >
-                    
+
                     <h3 className="text-xl font-bold text-gray-800 mb-1">
                       {doctor.name}
                     </h3>
@@ -146,28 +118,28 @@ const Specialists = () => {
         </ul>
 
         {/* CTA */}
-        <aside 
+        <aside
           data-aos="zoom-in"
           className="bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-8 md:p-12 text-center"
         >
-          <h3 
-            data-aos="fade-up" 
+          <h3
+            data-aos="fade-up"
             data-aos-delay="100"
             className="text-2xl md:text-3xl font-bold text-gray-800 mb-6"
           >
             Ready to Consult With Our Specialists?
           </h3>
 
-          <p 
-            data-aos="fade-up" 
+          <p
+            data-aos="fade-up"
             data-aos-delay="200"
             className="text-gray-600"
           >
             Book your appointment today and begin your journey to healthier, glowing skin.
           </p>
 
-          <div 
-            data-aos="fade-up" 
+          <div
+            data-aos="fade-up"
             data-aos-delay="300"
             className="flex flex-col sm:flex-row justify-center gap-4 mt-8"
           >
@@ -176,13 +148,6 @@ const Specialists = () => {
               className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full transition shadow-lg"
             >
               Book Consultation
-            </Link>
-
-            <Link
-              to="/contact"
-              className="border border-pink-600 hover:bg-pink-700 text-pink-600 hover:text-white px-8 py-3 rounded-full transition shadow-lg"
-            >
-              Contact Us
             </Link>
           </div>
         </aside>
