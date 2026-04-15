@@ -16,7 +16,10 @@ const Appointment = () => {
     <section className="bg-gradient-to-r from-pink-100 to-purple-100 py-10 px-4">
 
       {/* Header */}
-      <div className="text-center mb-8">
+      <div
+        className="text-center mb-8"
+        data-aos="fade-up"
+      >
         <h1 className="text-3xl md:text-4xl font-bold text-gray-700">
           Find a Doctor
         </h1>
@@ -25,6 +28,8 @@ const Appointment = () => {
           <select
             value={selectedDoctor}
             onChange={(e) => setSelectedDoctor(e.target.value)}
+            data-aos="fade-right"
+            data-aos-delay="100"
             className="border border-pink-300 bg-pink-100 text-pink-800 p-3 rounded-lg focus:ring-2 focus:ring-pink-400"
           >
             <option value="">Select Doctor</option>
@@ -34,21 +39,17 @@ const Appointment = () => {
               </option>
             ))}
           </select>
-
-          <input
-            type="text"
-            placeholder="Search Doctor"
-            className="w-full md:w-72 px-4 py-2 rounded-lg border border-pink-300 bg-pink-50 focus:ring-2 focus:ring-pink-400"
-          />
         </div>
       </div>
 
       {/* Grid */}
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-        {filteredDoctors.map((doctor) => (
+        {filteredDoctors.map((doctor, index) => (
           <div
             key={doctor.id}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
             className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 flex flex-col justify-between"
           >
 
@@ -106,10 +107,17 @@ const Appointment = () => {
         ))}
       </div>
 
+      {/* Modal */}
       {bookingDoctor && (
-        <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">
+        <div
+          className="fixed inset-0 bg-black/40 flex justify-center items-center z-50"
+          data-aos="fade-in"
+        >
 
-          <div className="bg-white p-6 rounded-xl w-[90%] max-w-md shadow-lg">
+          <div
+            className="bg-white p-6 rounded-xl w-[90%] max-w-md shadow-lg"
+            data-aos="zoom-in"
+          >
 
             <h2 className="text-xl font-bold mb-4 text-gray-800">
               Book Appointment
@@ -126,12 +134,13 @@ const Appointment = () => {
               onChange={(e) => setDate(e.target.value)}
               className="w-full border border-pink-300 bg-pink-50 text-pink-800 p-2 rounded-lg mb-3 focus:ring-2 focus:ring-pink-400 outline-none"
             />
+
             <input
               type="tel"
               placeholder="Enter Phone Number"
               value={phone}
               onChange={(e) => {
-                const value = e.target.value.replace(/[^0-9]/g, ""); // allow only digits
+                const value = e.target.value.replace(/[^0-9]/g, "");
                 setPhone(value);
               }}
               className="w-full border border-pink-300 bg-pink-50 text-pink-800 p-2 rounded-lg mb-4 focus:ring-2 focus:ring-pink-400 outline-none"
@@ -147,17 +156,16 @@ const Appointment = () => {
 
               <button
                 onClick={() => {
-                  // Phone validation
                   if (phone.length !== 10) {
                     alert("Enter valid 10-digit number");
                     return;
                   }
 
-                  // Date validation (optional but needed)
                   if (!date) {
                     alert("Select a date");
                     return;
                   }
+
                   setBookingDoctor(null);
                   alert("Appointment Requested!");
                 }}
