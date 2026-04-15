@@ -10,7 +10,7 @@ import Specialists from "./components/Specialists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
 import ScrollManager from "./components/ScrollManager";
-import Appointment from "./pages/appointment";
+import Appointment from "./pages/Appointment";
 
 const App = () => {
   const location = useLocation();
