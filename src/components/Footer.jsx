@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-400 mb-6">
-              Delivering advanced skincare treatments with expert care and precision, our approach is centered on achieving long-lasting, natural-looking results that enhance your unique features rather than alter them. We combine modern techniques with a deep understanding of skin health to provide personalized solutions tailored to your individual needs.
+              Delivering advanced skincare treatments with expert care and precision, our approach is centered on achieving long-lasting, natural-looking results that enhance your unique features.
             </p>
 
             <ul className="flex space-x-4">
@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <section>
-            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-2">
+            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-1">
               Quick Links
             </h3>
 
@@ -86,7 +86,7 @@ const Footer = () => {
 
           {/* Contact */}
           <section>
-            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-2">
+            <h3 className="text-xl font-bold mb-6 border-b-2 border-pink-500 inline-block pb-1">
               Contact Us
             </h3>
 
@@ -109,7 +109,7 @@ const Footer = () => {
 
               <li className="flex items-start">
                 <MdAccessTime className="text-pink-500 text-xl mr-3 mt-1" />
-                <span>Sun–Thu: 9AM–8PM, Fri: 2PM–9PM</span>
+                <span>Sun-Thu: 9AM-8PM, Fri: 2PM-9PM</span>
               </li>
 
             </ul>
