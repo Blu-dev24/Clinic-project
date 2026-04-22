@@ -11,7 +11,7 @@ export const doctors = [
         bio: "Expert in facial enhancements delivering natural and refined aesthetic results.",
         rating: 5,
         specialities: ["Facelifts", "Rhinoplasty", "Blepharoplasty"],
-        availability: ["Mon", "Wed", "Fri"],
+        availability: [1, 3, 5],
         timings: '10:00 AM - 4:00 PM',
     },
     {
@@ -22,7 +22,7 @@ export const doctors = [
         bio: "Specializes in advanced skin treatments for healthy, clear, and glowing skin.",
         rating: 4,
         specialities: ["Laser Treatments", "Botox", "Fillers"],
-        availability: ["Tue", "Thu", "Sat"],
+        availability: [2, 4, 6],
         timings: '11:00 AM - 5:00 PM',
     },
     {
@@ -33,7 +33,7 @@ export const doctors = [
         bio: "Focused on non-invasive procedures for youthful and long-lasting skin results.",
         rating: 5,
         specialities: ["Cool Sculpting", "Ultherapy", "Thread Lifts"],
-        availability: ["Mon", "Tue", "Fri"],
+        availability: [1, 3, 5],
         timings: '9:00 AM - 3:00 PM',
     },
     {
@@ -44,7 +44,7 @@ export const doctors = [
         bio: "Expert in anti-aging treatments and advanced cosmetic dermatology.",
         rating: 4,
         specialities: ["Chemical Peels", "Laser Resurfacing", "Botox"],
-        availability: ["Mon", "Thu", "Sat"],
+        availability: [2, 4, 6],
         timings: "10:00 AM - 2:00 PM",
     },
     {
@@ -55,7 +55,7 @@ export const doctors = [
         bio: "Specialist in modern hair restoration techniques.",
         rating: 5,
         specialities: ["Hair Transplant", "PRP Therapy", "Scalp Treatments"],
-        availability: ["Tue", "Fri", "Sat"],
+        availability: [1, 3, 5],
         timings: "12:00 PM - 6:00 PM",
     },
     {
@@ -66,7 +66,7 @@ export const doctors = [
         bio: "Focused on personalized skincare and acne treatments.",
         rating: 4,
         specialities: ["Acne Treatment", "Skin Brightening", "Hydrafacial"],
-        availability: ["Mon", "Wed", "Fri"],
+        availability: [2, 4, 6],
         timings: "9:30 AM - 1:30 PM",
     },
 ];

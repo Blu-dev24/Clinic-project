@@ -6,11 +6,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
-import Specialists from "./components/Specialists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
 import ScrollManager from "./components/ScrollManager";
 import Appointment from "./pages/Appointment";
+import Specialists from "./components/Specialists"
+
 
 const App = () => {
   const location = useLocation();

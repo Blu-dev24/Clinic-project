@@ -46,8 +46,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-400 mb-6">
-              Delivering advanced skincare treatments with expert care, precision,
-              and a focus on long-lasting, natural results.
+              Delivering advanced skincare treatments with expert care and precision, our approach is centered on achieving long-lasting, natural-looking results that enhance your unique features rather than alter them. We combine modern techniques with a deep understanding of skin health to provide personalized solutions tailored to your individual needs.
             </p>
 
             <ul className="flex space-x-4">

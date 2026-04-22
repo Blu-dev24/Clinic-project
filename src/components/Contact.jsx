@@ -220,7 +220,6 @@ const Contact = () => {
                   <button
                     type="submit"
                     className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full transition shadow-lg w-full md:w-auto"
-                    aria-label="submit contact form"
                   >
                     Send Message
                   </button>

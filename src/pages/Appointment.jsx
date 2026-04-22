@@ -5,12 +5,33 @@ const Appointment = () => {
 
   const [selectedDoctor, setSelectedDoctor] = React.useState("");
   const [bookingDoctor, setBookingDoctor] = React.useState(null);
+  const [selectedDoctorData, setSelectedDoctorData] = React.useState(null);
   const [date, setDate] = React.useState("");
   const [phone, setPhone] = React.useState("");
 
   const filteredDoctors = selectedDoctor
     ? doctors.filter((doc) => doc.name === selectedDoctor)
     : doctors;
+
+  const getNextAvailable = (availability) => {
+    const today = new Date();
+    const todayDay = today.getDay();
+
+    for (let i = 0; i < 7; i++) {
+      const checkDay = (todayDay + i) % 7;
+
+      if (availability.includes(checkDay)) {
+        const nextDate = new Date();
+        nextDate.setDate(today.getDate() + i);
+
+        return nextDate.toLocaleDateString("en-IN", {
+          weekday: "short",
+          day: "numeric",
+          month: "short",
+        });
+      }
+    }
+  };
 
   return (
     <section className="bg-gradient-to-r from-pink-100 to-purple-100 py-10 px-4">
@@ -48,8 +69,6 @@ const Appointment = () => {
         {filteredDoctors.map((doctor, index) => (
           <div
             key={doctor.id}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
             className="bg-white rounded-xl shadow-md hover:shadow-lg transition p-4 flex flex-col justify-between"
           >
 
@@ -72,18 +91,8 @@ const Appointment = () => {
             {/* Availability */}
             <div className="mt-4">
               <p className="text-sm font-medium text-gray-700 mb-1">
-                Availability
+                Next Available Slot: <span className="text-pink-600">{getNextAvailable(doctor.availability)}</span>
               </p>
-              <div className="flex flex-wrap gap-2">
-                {doctor.availability.map((day, i) => (
-                  <span
-                    key={i}
-                    className="text-xs px-2 py-1 bg-pink-100 text-pink-600 rounded-md"
-                  >
-                    {day}
-                  </span>
-                ))}
-              </div>
               <p className="text-xs text-gray-500 mt-1">
                 {doctor.timings}
               </p>
@@ -91,7 +100,10 @@ const Appointment = () => {
 
             {/* Actions */}
             <div className="flex justify-between items-center mt-4">
-              <button className="text-gray-500 hover:text-pink-500 text-sm font-medium cursor-pointer">
+              <button
+                onClick={() => setSelectedDoctorData(doctor)}
+                className="text-gray-500 hover:text-pink-500 text-sm font-medium cursor-pointer"
+              >
                 View Profile
               </button>
 
@@ -174,6 +186,57 @@ const Appointment = () => {
                 Request
               </button>
             </div>
+
+          </div>
+        </div>
+      )}
+
+      {selectedDoctorData && (
+        <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50"
+          data-aos="fade-in"
+        >
+
+          <div className="bg-white w-[90%] max-w-lg rounded-xl p-6 relative">
+
+            {/* Close */}
+            <button
+              onClick={() => setSelectedDoctorData(null)}
+              className="absolute font-bold top-3 right-4 text-gray-500 hover:text-black cursor-pointer"
+            >
+              ✕
+            </button>
+
+            {/* Content */}
+            <div className="flex gap-4 items-center mb-4">
+              <img
+                src={selectedDoctorData.image}
+                className="w-20 h-20 rounded-full object-cover"
+              />
+
+              <div>
+                <h2 className="text-xl font-bold">{selectedDoctorData.name}</h2>
+                <p className="text-pink-500">{selectedDoctorData.role}</p>
+              </div>
+            </div>
+
+            <p className="text-gray-600 mb-4">
+              {selectedDoctorData.bio}
+            </p>
+
+            <div className="mb-4">
+              <h3 className="font-semibold mb-2">Specialities</h3>
+              <div className="flex flex-wrap gap-2">
+                {selectedDoctorData.specialities.map((spec, i) => (
+                  <span key={i} className="bg-pink-100 text-pink-600 px-2 py-1 text-xs rounded">
+                    {spec}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-sm text-gray-500">
+              {selectedDoctorData.timings}
+            </p>
 
           </div>
         </div>
